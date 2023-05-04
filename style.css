@@ -1,0 +1,139 @@
+html{
+    height:100%
+}
+body{
+    background:#F4C7EB;
+    display: grid;
+    
+    justify-content: center;
+    align-items: center;
+    margin:0;
+    height:100%;
+    
+}
+.main-container{
+    background-color:white;
+    padding:10px 10px 10px 10px;
+    border-radius: 20px;
+}
+
+
+
+figure.container{
+    font-family: 'Raleway', Arial , sans-serif;
+    color:#fff;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    min-width:220px;
+    max-width: 310px;
+    max-height: 220px;
+    width:100%;
+ 
+   
+}
+
+figure.container *{
+    box-sizing: border-box;
+}
+
+figure.container img{
+    opacity:1;
+    width:100%;
+    transition: opacity .35s;
+}
+
+figure.container figcaption{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+figure.container figcaption > div{
+    float: left;
+    height:100%;
+    overflow: hidden;
+    width:50%;
+    position: relative;
+}
+
+figure.container figcaption::before{
+    position: absolute;
+    top:50%;
+    bottom:50%;
+    left:50%;
+    width:2px;
+    content: '';
+    opacity: 0;
+    background-color: rgba(255,255,255,0);
+    transition: all .4s;
+    transition-delay: .6s;
+}
+
+figure.container h3,
+figure.container p{
+    margin:0;
+    padding:20px;
+    opacity:0;
+    position:absolute;
+    top:0;
+    width:100%;
+    left:0;
+    transition: opacity .45s, transform .45s;
+}
+
+figure.container h3{
+    display: inline-block;
+    font-weight: 300;
+    line-height: 2;
+    text-transform: uppercase;
+    bottom: 0;
+    background:rgba(0,0,.5);
+    transform:translate3d(50%, 0%, 0);
+    transition-delay: 0s;
+}
+
+figure.container h3 span{
+    font-weight: 800;
+}
+
+figure.container p{
+    display: block;
+    bottom:0;
+    line-height: 0.9;
+    font-weight: 300;
+    top:0%;
+    color:#000;
+    background-color:#F4C7EB;
+    transform: translate3d(-50%,0%,0);
+    transition-delay: 0s;
+}
+
+figure.container:hover img{
+    opacity:0.7;
+}
+
+figure.container:hover figcaption h3,
+figure.container:hover figcaption p{
+    transform:translate3d(0%,0%,0);
+    transition-delay: .3s;
+    opacity:.8
+}
+
+figure.container:hover figcaption::before{
+    background-color: #fff;
+    top:0px;
+    bottom:0px;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+figure.container a{
+    left:0;
+    right:0;
+    top:0;
+    position: absolute;
+    color:#fff;
+}
